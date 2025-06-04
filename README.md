@@ -145,3 +145,62 @@ Trigger rollbacks or infra changes via IaC and CI/CD.*
 | Observability | Prometheus, Loki, Grafana       |
 | AI Monitoring | Python ML, Prometheus alerts, K8s Operator |
 | IaC          | Terraform                        |
+
+## 🗂️ Project Directory Structure
+
+```plaintext
+AutoPilotOps-AI-Driven-Self-Healing-Cloud-Infrastructure/
+├── README.md                         # Project documentation
+├── .gitignore                         # Git ignores for unnecessary files
+├── .github/
+│   └── workflows/                     # GitHub Actions CI/CD configurations
+├── terraform/
+│   ├── main.tf                         # Terraform modules for infrastructure (EKS, S3, VPC, etc.)
+│   ├── variables.tf                     # Terraform variables
+│   └── environments/
+│       ├── dev/                        # Development environment configurations
+│       └── prod/                        # Production environment configurations
+├── k8s/
+│   ├── helm-charts/                     # Helm charts for services like Prometheus, Grafana, etc.
+│   └── manifests/                        # Kubernetes raw YAML manifests (if needed)
+├── ai-monitoring/
+│   ├── model/                           # Machine learning model training code
+│   ├── service/                         # FastAPI application serving AI predictions
+│   └── data/                            # Sample logs and metrics datasets for monitoring
+├── operator/
+│   └── self-healer/                     # Kubernetes controller/operator for auto-remediation
+├── scripts/
+│   └── simulate_failure.sh              # Script for simulating failures to test AI-based remediation
+└── docs/
+    └── architecture.md                   # System design documentation and architecture diagrams
+```
+
+## ✅ Step-by-Step Setup
+
+1. 🧱 Initialize Git Repo
+
+```bash
+mkdir AutoPilotOps-AI-Driven-Self-Healing-Cloud-Infrastructure && cd AutoPilotOps-AI-Driven-Self-Healing-Cloud-Infrastructure
+git init
+echo "# AutoPilotOps" > README.md
+touch .gitignore
+```
+
+2. 🛠️ Install Tooling Locally (Dev Setup)
+Install these locally:
+
+- Terraform
+
+- kubectl
+
+- helm
+
+- minikube
+
+- Python 3.11+
+
+- pipenv/poetry(for Python project)
+
+- Docker
+
+- Tilt or Skaffold (optional for rapid local dev)
