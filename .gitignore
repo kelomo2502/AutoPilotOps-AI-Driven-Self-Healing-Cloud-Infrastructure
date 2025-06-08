@@ -1,0 +1,70 @@
+# === Terraform ===
+*.tfstate
+*.tfstate.*
+.terraform/
+.crash/
+*.tfvars
+override.tf
+override.tf.json
+.terraform.lock.hcl
+terraform.tfvars.json
+
+# === Kubernetes Manifests ===
+*.yaml~
+*.bak
+.kube/
+kubeconfig
+
+# === Helm ===
+*.tgz
+charts/
+*.lock
+
+# === Python (AI Service) ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.env
+.env.*
+venv/
+.envrc
+
+# === Node Modules (if frontend or operator uses npm) ===
+node_modules/
+
+# === Logs & Debug Files ===
+*.log
+*.out
+*.err
+*.pid
+nohup.out
+
+# === System Files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === IDEs ===
+.vscode/
+.idea/
+*.swp
+
+# === GitHub Actions Cache ===
+.github/workflows/*.bak
+
+# === Secrets & Keys ===
+*.pem
+*.key
+*.crt
+secrets.yaml
+id_rsa
+*.enc
+*.secret
+
+# === Docker ===
+*.tar
+.dockerignore
+
+# === AI Monitoring Data ===
+ai-monitoring/data/
